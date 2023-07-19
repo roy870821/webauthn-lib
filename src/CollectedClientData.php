@@ -23,7 +23,7 @@ class CollectedClientData
 
     private readonly string $challenge;
 
-    private readonly string $origin;
+    private string $origin;
 
     private readonly bool $crossOrigin;
 
@@ -101,6 +101,10 @@ class CollectedClientData
         return $this->origin;
     }
 
+    public function setOrigin($o): void
+    {
+        $this->origin = $o
+    }
     public function getCrossOrigin(): bool
     {
         return $this->crossOrigin;
